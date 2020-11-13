@@ -5,11 +5,10 @@
         <div class="card 1 mb-5">
           <img class="card_image card-img-top" src="https://cf.ltkcdn.net/cocktails/images/std/138513-425x281-iStock_000011959239XSmall.jpg" alt="Card image cap">
           <div class="card-body">
-            <p><li class="li-style"><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-style"%><%= link_to "", cocktail_path(cocktail), method: :delete, class: "fa fa-trash trash-icon"%> </li></p>
+            <p><li class="li-style"><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-style"%><%= link_to "", cocktail_path(cocktail), method: :delete, class: "fa fa-trash trash-icon", data: {confirm: "Are you sure?"}%> </li></p>
           </div>
         </div>
         <% end %>
       </ul>
   </div>
 </div>
-
