@@ -1,7 +1,15 @@
-<h1>List of all coctails 🚀</h1>
+<div class="main-container"> 
+  <div class="container cards-list">
+      <ul class="row col-12">
+        <% @cocktails.each do |cocktail| %>
+        <div class="card 1 mb-5">
+          <img class="card_image card-img-top" src="https://cf.ltkcdn.net/cocktails/images/std/138513-425x281-iStock_000011959239XSmall.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p><li class="li-style"><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-style"%><%= link_to "", cocktail_path(cocktail), method: :delete, class: "fa fa-trash trash-icon"%> </li></p>
+          </div>
+        </div>
+        <% end %>
+      </ul>
+  </div>
+</div>
 
-<ul>
-  <% @coctails.each do |coctail| %>
-    <li><%= link_to coctail.name, coctail_path(coctail) %></li>
-  <% end %>
-</ul> 
